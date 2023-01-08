@@ -1,0 +1,16 @@
+.scrappePageBtn {
+  height: 50px;
+  width: 50px;
+  color: black;
+  background-color: white;
+  border-color: white;
+  font-weight: 700;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
