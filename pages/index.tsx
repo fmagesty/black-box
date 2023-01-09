@@ -17,7 +17,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Link href="/NewsScrapper">News Scrapper</Link>
+          <Link href="/ScrapperServices">Check some of the scrapper services</Link>
+          <Link href="/idk-some-page">Some page idk</Link>
         </div>
         {/* <div className={styles.description}>
           <p>
