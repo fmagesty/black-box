@@ -1,6 +1,9 @@
 .mainContainer {
+  display: flex;
   flex-direction: row;
-  padding: 1rem 3rem 3rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
+  margin: 1rem 1rem 1rem 1rem;
+  background-color: green;
 }
 
 .header {
