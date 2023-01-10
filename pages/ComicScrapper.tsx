@@ -5,7 +5,7 @@ import fetchComics from "./api/fetchComics";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ComicScrapper() {
+const ComicScrapper = () => {
   const [inputValue, setInputValue] = useState("");
   const [title, setTitle] = useState("");
   const [imgSrc, setImgSrc] = useState("");
@@ -35,7 +35,6 @@ export default function ComicScrapper() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
         <form onSubmit={(e) => handleSubmit(e, inputValue)}>
           {/* <label>
             MOVE ME LATER
@@ -56,3 +55,5 @@ export default function ComicScrapper() {
     </div>
   );
 }
+
+export default ComicScrapper;
