@@ -1,13 +1,16 @@
+import Head from "next/head";
 import Link from "next/link";
-import styles from '../styles/ScrapperServices.module.css';
+import styles from "../styles/ScrapperServices.module.css";
 
 const ScrapperServices = () => {
-
   return (
-    <div className={styles.container}>
+    <div className={styles.header}>
       <h1>Scrapper Services</h1>
-      <Link href="/">Back to the Homepage</Link>
-      <Link href="/ComicScrapper">Comic Scrapper from xcdc</Link>
+    <div className={styles.linksContainer}>
+        <Link className={styles.link} href="/ComicScrapper">Comic Scrapper from xcdc</Link>
+        <Link className={styles.link} href="/NewsScrapper">News Scrapper</Link>
+        <Link className={styles.link} href="/">Back to the Homepage</Link>
+    </div>
     </div>
   );
 };
