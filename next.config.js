@@ -9,6 +9,12 @@ const nextConfig = {
         // port: '',
         // pathname: '/account123/**',
       },
+      {
+        protocol: 'https',
+        hostname: 's2.glbimg.com',
+        // port: '',
+        // pathname: '/account123/**',
+      },
     ],
   },
 }
