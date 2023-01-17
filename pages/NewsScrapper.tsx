@@ -1,4 +1,4 @@
-import styles from "../styles/ComicScrapper.module.css";
+import styles from "../styles/NewsScrapper.module.css";
 import Head from "next/head";
 import fetchNews from "./api/fetchNews";
 import Link from "next/link";
@@ -24,7 +24,7 @@ const NewsScrapper = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.mainContainer}>
       <Head>
         <title>Fetch News</title>
         <link rel="icon" href="/favicon.ico" />

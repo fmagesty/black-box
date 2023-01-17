@@ -1,0 +1,42 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353b3c;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.scrappePageBtn {
+  color: black;
+  background-color: white;
+  border-color: white;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+}
