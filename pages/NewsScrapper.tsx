@@ -1,31 +1,22 @@
-import { useState } from "react";
 import styles from "../styles/ComicScrapper.module.css";
 import Head from "next/head";
 import fetchNews from "./api/fetchNews";
 import Link from "next/link";
 import Image from "next/image";
+import RenderNewsCards from "../components/RenderNewsCards";
+import { useState } from "react";
+
 
 const NewsScrapper = () => {
-  const [headline, setHeadline] = useState("");
-  const [imgSrc, setImgSrc] = useState("");
+  const [cards, setCards] = useState(undefined)
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     let newsData = await fetchNews();
     if (newsData) {
-      console.log(newsData);
-      renderNews(newsData);
+      let cards = RenderNewsCards(newsData)
+      setCards(cards) // have to define the interface for this. tsx is sad
     }
-    return;
-  };
-
-  const renderNews = async (newsData: any) => {
-    console.log("newsData:", newsData);
-    const headline = newsData.props.headline
-    const image = newsData.props.image
-    setHeadline(headline)
-    setImgSrc(image)
-    return
   };
 
   return (
@@ -42,10 +33,7 @@ const NewsScrapper = () => {
         </form>
       </main>
       <Link href="/">Go to Homepage</Link>
-      <>
-        <h1>{headline ? headline : undefined}</h1>
-        <Image src={imgSrc ? imgSrc : ""} width={500} height={500} alt={"newsImg"} />
-      </>
+      <>{cards && cards}</>
     </div>
   );
 };
