@@ -1,10 +1,9 @@
 import styles from "../styles/NewsScrapper.module.css";
 import Head from "next/head";
 import fetchNews from "./api/fetchNews";
-import Link from "next/link";
-import Image from "next/image";
 import RenderNewsCards from "../components/RenderNewsCards";
 import { useState, useEffect } from "react";
+import Header from "../components/Header";
 
 const NewsScrapper = () => {
   const [cards, setCards] = useState(undefined);
@@ -29,7 +28,7 @@ const NewsScrapper = () => {
         <title>Fetch News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <Link href="/">Go to Homepage</Link>
+        <Header/>
       {cards && cards}
     </div>
   );

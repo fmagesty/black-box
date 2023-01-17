@@ -2,8 +2,8 @@ import { useState } from "react";
 import styles from "../styles/ComicScrapper.module.css";
 import Head from "next/head";
 import fetchComics from "./api/fetchComics";
-import Link from "next/link";
 import Image from "next/image";
+import Header from "../components/Header";
 
 const ComicScrapper = () => {
   const [inputValue, setInputValue] = useState("");
@@ -34,6 +34,7 @@ const ComicScrapper = () => {
         <title>Fetch Twitter Follower</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
       <main className={styles.main}>
         <form onSubmit={(e) => handleSubmit(e, inputValue)}>
           {/* <label>
@@ -46,7 +47,7 @@ const ComicScrapper = () => {
           <button type={"submit"}><h1>Fetch Today&apos;s comic from XKCD</h1></button>
         </form>
       </main>
-      <Link href="/">Go to Homepage</Link>
+
 
       <>
         <h1>{title ? title : undefined}</h1>
