@@ -1,0 +1,8 @@
+.mainContainer {
+  height: 100vh;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+}
