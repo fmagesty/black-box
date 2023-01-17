@@ -3,15 +3,12 @@
   flex-direction: row;
   padding: 1rem 1rem 1rem 1rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  align-items: center;
-  grid-template-rows: repeat(5, auto);
   background-color: #c6c7c4;
-  /* gap: 16px; */
 }
 
 .cardHeadline {
+  height: 100%;
   color: #c4170c;
-  margin-bottom: 3rem;
 }
 
 .cardLink {
@@ -22,8 +19,7 @@
 .cardInnerContainer {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  /* background-color: green; */
   align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  width: 100%;
 }

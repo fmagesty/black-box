@@ -18,9 +18,9 @@ const RenderNewsCards = (newsData: any) => {
       <div className={styles.cardOutterContainer}>
         <Image key={thumb} src={thumb} alt={thumb} width={276} height={155} />
         <div className={styles.cardInnerContainer}>
-          <h4 className={styles.cardHeadline} key={title}>
+          <h3 className={styles.cardHeadline} key={title}>
             {title}
-          </h4>
+          </h3>
           <Link className={styles.cardLink} href={link}>
             fonte
           </Link>
