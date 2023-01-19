@@ -1,16 +1,16 @@
 import axios from "axios";
 const cheerio = require("cheerio");
 
-const fetchNews = async (inputValue) => {
+const fetchNews = async () => {
   let thumbnailList = [];
   let headlineList = [];
   let newsLinkList = [];
+  const g1 = "https://g1.globo.com/"
 
   try {
-    const result = await axios.get("https://g1.globo.com/");
-    const data = result.data;
+    const response = await axios.get(g1);
+    const data = response.data;
     const $ = cheerio.load(data);
-
     // Populate thumbnails Array
     let images = $("._evt").find(".bstn-fd-picture-image");
     // console.log("images:",images);
@@ -23,8 +23,8 @@ const fetchNews = async (inputValue) => {
     });
 
     // Populate headlines Array
-    let bla = $("._evt h2")
-    bla.map((i,e) => {
+    let htmlElement = $("._evt h2")
+    htmlElement.map((i,e) => {
       let headline = e.children[0].children[0].data
       let href = e.children[0].attribs.href
       headlineList.push(headline)
