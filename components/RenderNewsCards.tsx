@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/RenderNewsCards.module.css";
 
 const RenderNewsCards = (newsData: any) => {
-  console.log("newsData:", newsData);
+  // console.log("newsData:", newsData);
   let cardList = [];
   let headlineList = newsData.props.headlineList;
   let thumbnailList = newsData.props.thumbnailList;
@@ -15,14 +15,13 @@ const RenderNewsCards = (newsData: any) => {
     let thumb = thumbnailList[i];
     let link = newsLinkList[i];
     cardList.push(
-      <div className={styles.cardOutterContainer}>
-        <Image key={thumb} src={thumb} alt={thumb} width={276} height={155} />
+      <div className={styles.cardOutterContainer} key={title}>
+        <Image key={thumb} src={thumb} alt={thumb} width={200} height={100} aspect-ratio={"auto"}/>
         <div className={styles.cardInnerContainer}>
-          <h3 className={styles.cardHeadline} key={title}>
-            {title}
-          </h3>
           <Link className={styles.cardLink} href={link}>
-            fonte
+            <h4 className={styles.cardHeadline} >
+            {title}
+          </h4>
           </Link>
         </div>
       </div>
