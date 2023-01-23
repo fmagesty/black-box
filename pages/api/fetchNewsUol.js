@@ -3,44 +3,34 @@ const cheerio = require("cheerio");
 
 // maybe change from "List" to "Array" on variable names.
 const fetchNewsUol = async () => {
-  let headlineList = [];
-  let newsLinkList = [];
-  let thumbnailList = [];
+  const dataObj = {}
   const uol = "https://noticias.uol.com.br/";
 
   try {
     const response = await axios.get(uol);
     const data = response.data;
     const $ = cheerio.load(data);
-
-    // Populate headlineList Array
     let headlineHTML = $(".thumb-title");
     headlineHTML.map((i, e) => {
       let headline = e.children[0].data;
-      headlineList.push(headline);
+      dataObj[i] = { headline: "", href: "", imageSrc: "" };
+      dataObj[i].headline = headline
     });
-
-    // Populate newsLinkList Array
-    let newsLinkHTML = $(".thumbnails-wrapper");
-    newsLinkHTML.map((i, e) => {
-      let newsLink = e.children[0].attribs.href;
-      newsLinkList.push(newsLink);
+    let hrefHTML = $(".thumbnails-wrapper");
+    hrefHTML.map((i, e) => {
+      let href = e.children[0].attribs.href;
+      dataObj[i].href = href;
     });
-
-    // Populate newsLinkList Array
-    // let imagesHTML = $("._evt").find(".bstn-fd-picture-image");
-    let imagesHTML = $(".thumb-layer");
-    imagesHTML.map((i, e) => {
-      const imageSrc = e.children[0].next.attribs.src;
-      thumbnailList.push(imageSrc);
-      console.log(thumbnailList);
+    let imgSrcHTML = $(".thumb-layer");
+    imgSrcHTML.map((i, e) => {
+      const imageSrc = e.children[0].next.attribs["data-src"];
+      imageSrc ? dataObj[i].imageSrc = imageSrc : dataObj[i].imageSrc = ''
     });
-
     return {
-      props: { headlineList, newsLinkList, thumbnailList },
+      props: dataObj
     };
   } catch (error) {
-    console.log(error);
+    console.log("error:", error);
   }
 };
 
