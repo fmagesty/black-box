@@ -11,24 +11,19 @@ const NewsScrapper = () => {
   const [cards, setCards] = useState<JSX.Element[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    fetchNews("g1");
-    // fetchNews("uol");
-  }, []);
-
-  const fetchNews = async (source: string) => {
-      let response;
-      setIsLoading(true);
-      if (source === "g1") {
-        response = await fetchNewsG1();
-      } else if (source === "uol") {
-        response = await fetchNewsUol();
-      }
-      let cards = RenderNewsCards(response);
-      setCards(cards);
-      setIsLoading(false);
-      return response;
-    };
+  const handleClick = async (source: string) => {
+    let response;
+    setIsLoading(true);
+    if (source === "g1") {
+      response = await fetchNewsG1();
+    } else if (source === "uol") {
+      response = await fetchNewsUol();
+    }
+    let cards = RenderNewsCards(response);
+    setCards(cards);
+    setIsLoading(false);
+    return response;
+  };
 
   return (
     <div className={styles.mainContainer}>
@@ -37,6 +32,10 @@ const NewsScrapper = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <div className={styles.buttonsContainer}>
+      <button className={styles.button} onClick={() => handleClick("g1")}>G1</button>
+      <button className={styles.button} onClick={() => handleClick("uol")}>UOL</button>
+      </div>
       {isLoading ? <Loading /> : cards}
     </div>
   );
