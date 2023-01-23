@@ -4,24 +4,30 @@ import Link from "next/link";
 import styles from "../styles/RenderNewsCards.module.css";
 
 const RenderNewsCards = (newsData: any) => {
-  // console.log("newsData:", newsData);
+  console.log("newsData:", newsData);
   let cardList = [];
-  let headlineList = newsData.props.headlineList;
-  let thumbnailList = newsData.props.thumbnailList;
-  let newsLinkList = newsData.props.newsLinkList;
+  for (let i = 0; i < Object.keys(newsData.props).length; i++) {
+    let headline = newsData.props[i].headline;
+    let imageSrc = newsData.props[i].imageSrc;
+    let href = newsData.props[i].href;
 
-  for (let i = 0; i < headlineList.length; i++) {
-    let title = headlineList[i];
-    let thumb = thumbnailList[i];
-    let link = newsLinkList[i];
+
     cardList.push(
-      <div className={styles.cardOutterContainer} key={title}>
-        <Image key={thumb} src={thumb} alt={thumb} width={200} height={100} aspect-ratio={"auto"}/>
+      <div className={styles.cardOutterContainer} key={i}>
+        {imageSrc ? (
+          <Image
+            key={imageSrc}
+            src={imageSrc}
+            alt={headline}
+            width={Infinity}
+            height={Infinity}
+            aspect-ratio={"auto"}
+            id={"thumbnail"}
+          />
+        ) : null}
         <div className={styles.cardInnerContainer}>
-          <Link className={styles.cardLink} href={link}>
-            <h4 className={styles.cardHeadline} >
-            {title}
-          </h4>
+          <Link className={styles.cardLink} href={href}>
+            <h2 className={styles.cardHeadline}>{headline}</h2>
           </Link>
         </div>
       </div>
