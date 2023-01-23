@@ -1,9 +1,13 @@
 TODO:
 
+- priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
 - ~~Header containing links to homepage and other pages~~
 - ~~CSS of news cards~~ (done for prototype)
 - Info about install/run/deploy/contribute/etc on this README
 - filter the news based on the person's location. for now I'm fetching from the frontpage so it gets news from different states
+- eslint/prettier config with airbnb - already have eslint default
+- dotenv when necesarry - which it'll be eventually
+- add material ui - MUI - so that my project isnt the ugly blob it always is xD - at least chaptGPT did good on the color pallete
 - ..
 
 // some links:
