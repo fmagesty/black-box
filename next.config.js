@@ -1,7 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
   images: {
     remotePatterns: [
       {
@@ -16,8 +14,6 @@ const nextConfig = {
         // port: '',
         // pathname: '/account123/**',
       },
-
-      // Double check which of these 3 are needed and if its just images:
       {
         protocol: "https",
         hostname: "conteudo.imguol.com.br",
@@ -26,17 +22,17 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "noticias.uol.com.br",
-        // port: '',
-        // pathname: '/account123/**',
-      },
-      {
-        protocol: "https",
-        hostname: "api.uol.com.br",
-        // port: '',
-        // pathname: '/account123/**',
+        hostname: "images.dog.ceo",
       },
     ],
+  },
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/NewsScrapper": { page: "/NewsScrapper" },
+      "/ComicScrapper": { page: "/ComicScrapper" },
+      "/PuppyScrapper": { page: "/PuppyScrapper" },
+    };
   },
 };
 
