@@ -1,0 +1,34 @@
+.puppy-scrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.puppy-scrapper img {
+  width: 20%;
+  height: auto;
+  margin: 2%;
+}
+
+.puppyImage {
+  width: 250px; /* check if this is overriding the width/height on the Image component */
+  height: 250px; /* check if this is overriding the width/height on the Image component */
+  object-fit: cover; /* this will make sure the image is scaled to fit within the given width and height while maintaining its aspect ratio */
+}
+
+@media (max-width: 1200px) {
+  .puppy-scrapper img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .puppy-scrapper img {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 600px) {
+  .puppy-scrapper img {
+    width: 50%;
+  }
+}
