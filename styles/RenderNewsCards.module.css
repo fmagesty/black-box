@@ -4,20 +4,21 @@
   padding: 1rem 1rem 1rem 1rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   background-color: #e6e6e6;
-  width: 50%;
   align-self: center;
   border-radius: 10px;
+  width: 80%;
 }
 
 .cardOutterContainer > * {
   border-radius: 5px;
+  max-height: 300px;
 }
 
 .cardHeadline {
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
   color: #cc0000;
-  font-size: large;
+  /* font-size: 24px; */
 }
 
 .cardLink {
@@ -33,4 +34,9 @@
   /* align-items: center; */
   padding: 1rem 1rem 1rem 1rem;
   width: 100%;
+}
+
+#thumbnail {
+  max-width: 300px;
+  max-height: 300px;
 }

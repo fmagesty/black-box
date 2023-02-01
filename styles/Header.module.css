@@ -2,13 +2,13 @@
   display: flex;
   justify-content: space-evenly;
   padding: 1rem 1rem 1rem 1rem;
-  background-color: #f0a800;
+  background-color: #e6e6e6;
   width: 100%;
   margin-bottom: 2rem;
 }
 
 .link {
   font-weight: 700;
-  color: #ffffff;
+  color: #4c4c4c;
   font-size: large;
 }
