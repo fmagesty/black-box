@@ -6,7 +6,7 @@
   background-color: #e6e6e6;
   align-self: center;
   border-radius: 10px;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .cardOutterContainer > * {
@@ -15,10 +15,9 @@
 }
 
 .cardHeadline {
-  /* height: 100%; */
-  /* width: 100%; */
   color: #cc0000;
-  /* font-size: 24px; */
+  font-size: 24px;
+  text-align: center;
 }
 
 .cardLink {
@@ -36,7 +35,7 @@
   width: 100%;
 }
 
-#thumbnail {
-  max-width: 300px;
-  max-height: 300px;
+.imageSrc {
+  max-width: 150px;
+  max-height: 150px;
 }
