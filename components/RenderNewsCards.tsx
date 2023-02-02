@@ -19,16 +19,17 @@ const RenderNewsCards = (newsData: any) => {
             key={imageSrc}
             src={imageSrc}
             alt={headline}
-            width={Infinity}
-            height={Infinity}
+            width={400}
+            height={300}
             aspect-ratio={"auto"}
-            id={"thumbnail"}
+            className={"imageSrc"}
           />
         ) : null}
         <div className={styles.cardInnerContainer}>
           <Link className={styles.cardLink} href={href}>
             <h2 className={styles.cardHeadline}>{headline}</h2>
           </Link>
+          <p className={styles.newsSummary}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laborum asperiores delectus doloribus odit, cupiditate accusamus nobis aperiam cumque nulla harum quaerat optio minus ex tenetur pariatur quae molestiae, distinctio officiis voluptates error quisquam voluptas! Provident illo molestias corporis harum placeat voluptatem ipsam dicta, minus sapiente dignissimos itaque magnam aperiam.</p>
         </div>
       </div>
     );
