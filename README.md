@@ -1,6 +1,8 @@
 TODO:
 
 - priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
+- create more tests
+
 - ~~Header containing links to homepage and other pages~~
 - ~~CSS of news cards~~ (done for prototype)
 - Info about install/run/deploy/contribute/etc on this README
@@ -8,6 +10,7 @@ TODO:
 - eslint/prettier config with airbnb - already have eslint default
 - dotenv when necesarry - which it'll be eventually
 - add material ui - MUI - so that my project isnt the ugly blob it always is xD - at least chaptGPT did good on the color pallete
+- search input for keywords and to search news by a date/timeframe
 - ..
 
 // some links:
