@@ -1,8 +1,20 @@
-TODO:
+## Black box app (name may change)
 
+- Doing this for fun and currently making a news scrapper but I wanna test various things with this app as personal project. Including NextJS which is cool
+
+## Work in progress. Current app status on Feb 2nd 2023:
+
+<p align="center">
+  <img src="assets/appimg-feb-02-2023.png" alt="Work in progress. App on Feb 2nd 2023">
+</p>
+
+## TODO:
+
+- priority: refactor app for scalability before adding more news sources
 - priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
-- create more tests
 
+- create more tests
+- add other news sources
 - ~~Header containing links to homepage and other pages~~
 - ~~CSS of news cards~~ (done for prototype)
 - Info about install/run/deploy/contribute/etc on this README
