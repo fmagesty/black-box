@@ -10,6 +10,7 @@ const RenderNewsCards = (newsData: any) => {
     let headline = newsData.props[i].headline;
     let imageSrc = newsData.props[i].imageSrc;
     let href = newsData.props[i].href;
+    let textSummary = newsData.props[i].textSummary;
 
 
     cardList.push(
@@ -29,7 +30,7 @@ const RenderNewsCards = (newsData: any) => {
           <Link className={styles.cardLink} href={href}>
             <h2 className={styles.cardHeadline}>{headline}</h2>
           </Link>
-          <p className={styles.newsSummary}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laborum asperiores delectus doloribus odit, cupiditate accusamus nobis aperiam cumque nulla harum quaerat optio minus ex tenetur pariatur quae molestiae, distinctio officiis voluptates error quisquam voluptas! Provident illo molestias corporis harum placeat voluptatem ipsam dicta, minus sapiente dignissimos itaque magnam aperiam.</p>
+          <p className={styles.newsSummary}>{textSummary}</p>
         </div>
       </div>
     );
