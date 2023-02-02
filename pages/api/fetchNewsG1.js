@@ -20,7 +20,7 @@ const fetchNewsG1 = async () => {
     let imgSrcHTML = $(".bstn-fd-picture-image");
     imgSrcHTML.map((i, e) => {
       const imageSrc = e.attribs.src;
-      imageSrc ? dataObj[i].imageSrc = imageSrc : dataObj[i].imageSrc = ''
+      dataObj[i].imageSrc = imageSrc
     })
     return {
       props: dataObj,
