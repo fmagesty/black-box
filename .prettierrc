@@ -1,0 +1,10 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "singleQuote": false,
+    "jsx-single-quote": false,
+    "quoteProps": "consistent",
+    "semi": false,
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": ["error", "double"]
+}
