@@ -2,8 +2,6 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "../styles/RenderNewsCards.module.css"
-import { log } from "console"
-import { CLIENT_RENEG_LIMIT } from "tls"
 
 interface News {
     headline: string

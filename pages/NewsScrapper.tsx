@@ -3,26 +3,32 @@ import Head from "next/head"
 import fetchNewsG1 from "./api/fetchNewsG1"
 import fetchNewsUol from "./api/fetchNewsUol"
 import RenderNewsCards from "../components/RenderNewsCards"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Header from "../components/Header"
 import Loading from "../components/Loading"
 
 const NewsScrapper = () => {
     const [cards, setCards] = useState<JSX.Element[]>([])
     const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState<string | null>(null)
 
     const handleClick = async (source: string) => {
-        let response
+        let res: any
         setIsLoading(true)
-        if (source === "g1") {
-            response = await fetchNewsG1()
-        } else if (source === "uol") {
-            response = await fetchNewsUol()
+        setError(null)
+        try {
+            if (source === "g1") {
+                res = await fetchNewsG1()
+            } else if (source === "uol") {
+                res = await fetchNewsUol()
+            }
+            let cards = RenderNewsCards(res)
+            setCards(cards)
+        } catch (err: any) {
+            setError(err)
+        } finally {
+            setIsLoading(false)
         }
-        let cards = RenderNewsCards(response)
-        setCards(cards)
-        setIsLoading(false)
-        return response
     }
 
     return (
@@ -46,6 +52,7 @@ const NewsScrapper = () => {
                     UOL
                 </button>
             </div>
+            {/* {error && error} */}
             {isLoading ? <Loading /> : cards}
         </div>
     )

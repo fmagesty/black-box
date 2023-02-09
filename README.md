@@ -1,7 +1,7 @@
 ## Black box app (name may change)
 
-- Doing this for fun and currently making a news scrapper but I wanna test various things with this app as personal project. Including NextJS which is cool
-- Feel free to fork this project if you want to use as a base for you own or contribute to the current repo as well
+-   Doing this for fun and currently making a news scrapper but I wanna test various things with this app as personal project. Including NextJS which is cool
+-   Feel free to fork this project if you want to use as a base for you own or contribute to the current repo as well
 
 ## How to run this app locally:
 
@@ -35,23 +35,23 @@ For now there is no need for environmental variables
 
 ## TODO:
 
-- priority: refactor app for scalability before adding more news sources
-- priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
+-   priority: refactor app for scalability before adding more news sources
+-   priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
 
-- create more tests
-- add other news sources
-- ~~Header containing links to homepage and other pages~~
-- ~~CSS of news cards~~ (done for prototype)
-- ~~Info about install/run/deploy/contribute/etc on this README~~
-- filter the news based on the person's location. for now I'm fetching from the frontpage so it gets news from different states
-- eslint/prettier config with airbnb - already have eslint default
-- dotenv when necesarry - which it'll be eventually
-- add material ui - MUI - so that my project isnt the ugly blob it always is xD - at least chaptGPT did good on the color pallete
-- search input for keywords and to search news by a date/timeframe
-- ..
+-   create more tests
+-   add other news sources
+-   ~~Header containing links to homepage and other pages~~
+-   ~~CSS of news cards~~ (done for prototype)
+-   ~~Info about install/run/deploy/contribute/etc on this README~~
+-   filter the news based on the person's location. for now I'm fetching from the frontpage so it gets news from different states
+-   eslint/prettier config with airbnb - already have eslint default
+-   dotenv when necesarry - which it'll be eventually
+-   add material ui - MUI - so that my project isnt the ugly blob it always is xD - at least chaptGPT did good on the color pallete
+-   search input for keywords and to search news by a date/timeframe
+-   ..
 
 // some reference links:
 
-- [G1](g1.globo.com)
-- [UOL](https://noticias.uol.com.br/)
-- [UOL api](https://api.uol.com.br/#UsandoOAuth2.0paraacessarasAPIsdoUOL-5-ComochamarumaAPIUOL)
+-   [G1](g1.globo.com)
+-   [UOL](https://noticias.uol.com.br/)
+-   [UOL api](https://api.uol.com.br/#UsandoOAuth2.0paraacessarasAPIsdoUOL-5-ComochamarumaAPIUOL)
