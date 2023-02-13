@@ -1,5 +1,5 @@
 import axios from "axios"
-import cheerio from "cheerio"
+import cheerio, { text } from "cheerio"
 
 interface NewsItem {
     headline: string
@@ -49,17 +49,11 @@ const fetchNewsUol = async (): Promise<{
                 const response = await axios.get(dataObj[i].href)
                 const data = response.data
                 const $ = cheerio.load(data)
-                let textSummaryHTML = $(".text p")
-                let textSummary = ""
-                textSummaryHTML.map((j: number, f: any) => {
-                    if (f.children[0] && textSummary.length < 280) {
-                        // make the text summary not go over 280 chars
-                        textSummary += f.children[0].data + " "
-                    }
-                })
-                textSummary.length > 0
-                    ? (dataObj[i].textSummary = textSummary + "...")
-                    : (dataObj[i].textSummary = "")
+                let textSummaryHTML = $(".text p").text()
+                if (textSummaryHTML.length >= 280) {
+                    let textSummary = textSummaryHTML.substring(0, 280) + "..."
+                    dataObj[i].textSummary = textSummary
+                }
             } catch (error) {
                 console.error(
                     `Error when fetching text summary for ${dataObj[i].href}:`,
