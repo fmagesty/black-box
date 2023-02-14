@@ -1,3 +1,5 @@
+# Disclaimer: This project has been discontinued for now. Currently, it is blocked from making requests on G1 and UOL :laughing:, which was expected. But it was fun while it lasted. If you test this project remember that this might happen and can be fixed by changing the server from which the requests are being made (until they block it again). But I would not advise to do so, as to not overload their servers. This repo might still be used for learning purposes as a base for making requests where it won't affect a day to day application like those. This is best applied on a a free api, for example
+
 ## Black box app (name may change)
 
 -   Doing this for fun and currently making a news scrapper but I wanna test various things with this app as personal project. Including NextJS which is cool
@@ -33,13 +35,13 @@ For now there is no need for environmental variables
   <img src="assets/appimg-feb-02-2023.png" alt="Work in progress. App on Feb 2nd 2023">
 </p>
 
-## TODO:
+## TODO / Roadmap:
 
 -   priority: refactor app for scalability before adding more news sources
 -   priority: fix how RenderNewsCard is rendering the image on the card when there is no image available from source
 
 -   create more tests
--   add other news sources
+-   add other news sources (terra, metropole, r7, cnn, folha, estadao, veja, bcc) - based on popular sites and third-party feedback
 -   ~~Header containing links to homepage and other pages~~
 -   ~~CSS of news cards~~ (done for prototype)
 -   ~~Info about install/run/deploy/contribute/etc on this README~~
