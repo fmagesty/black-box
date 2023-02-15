@@ -1,4 +1,4 @@
-# Disclaimer: This project has been discontinued for now. Currently, my ip address seems to be blocked from making requests on G1 and UOL :laughing:, which was expected. But it was fun while it lasted. If you test this project remember that this might happen and can be fixed but I would not advise to do so, as to not overload their servers. This repo might still be used for learning purposes as a base for making requests where it won't affect a day to day application like those. This is best applied on a a free api, for example
+# Disclaimer: This project has been discontinued for now. Currently, my ip address/origin domain seems to be blocked from making requests on G1 and UOL :laughing:, which was expected. It was fun while it lasted. If you test this project remember that this might happen and can be fixed but I would not advise to do so, as to not overload their servers. This repo might still be used for learning purposes as a base for making requests where it won't affect a day to day application like those. This is best applied on a a free api, for example
 
 ## Black box app (name may change)
 
